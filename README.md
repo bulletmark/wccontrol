@@ -57,8 +57,13 @@ Left   | Data        | GPIO4 (board pin 7)
 Middle | VCC         | 5V power (e.g. board pin 4)
 Right  | GND         | Ground  (e.g. board pin 6).
 
-Note that `wccontrol` uses GPIO4 by default but you can easily set it to use any
-of the other Raspberry Pi GPIO pins by passing the `pin` argument.
+You can significantly increase the range of the transmitter by soldering
+a 17.3 cm copper wire to the ANT pad in the corner of the PCB. Orientate
+the wire parallel to the switches.
+
+Note that `wccontrol` uses GPIO4 by default to drive the transmitter but
+you can easily set it to use any of the other Raspberry Pi GPIO pins by
+passing the `pin` argument.
 
 ### Installation
 
