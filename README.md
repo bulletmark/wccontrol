@@ -58,8 +58,8 @@ Middle | VCC         | 5V power (e.g. board pin 4)
 Right  | GND         | Ground  (e.g. board pin 6).
 
 You can significantly increase the range of the transmitter by soldering
-a 17.3 cm copper wire to the ANT pad in the corner of the PCB. Orientate
-the wire parallel to the switches.
+a 17.3 cm copper wire to the ANT pad in the corner of the PCB. Ideally,
+orientate the wire parallel to the switches.
 
 Note that `wccontrol` uses GPIO4 by default to drive the transmitter but
 you can easily set it to use any of the other Raspberry Pi GPIO pins by
@@ -149,11 +149,11 @@ Switch group 0, device 3 to OFF:
 
 Switch both (i.e. all) devices in group 0 to ON:
 
-    wccontrol 0 4 1
+    wccontrol 0 6 1
 
 Switch both (i.e. all) devices in group 0 to OFF:
 
-    wccontrol 0 4 0
+    wccontrol 0 6 0
 
 ### Using as a Python Module
 
