@@ -15,9 +15,9 @@ protocol = '0011010011{:010b}{:01b}{:03b}1'
 # Default parameters. Times are all in secs.
 pin = 4
 retries = 10
-bitshortgap = 400 / 1000000
-bitlonggap = 800 / 1000000
-msggap = 50 / 1000
+bitshortgap = 406 / 1000000
+bitlonggap = 937 / 1000000
+msggap = 20 / 1000
 
 def set(group, address, on, gpiopin=None):
     'Transmit given value to given address'
