@@ -2,8 +2,8 @@
 
 This is a Raspberry Pi command line program and Python module to switch
 on and off a Watts Clever RF Switch via a cheap 433 MHz transmitter
-module. I also have a higher level program
-[`wcscheduler`](https://github.com/bulletmark/wcscheduler) which imports
+module. I also have a [higher level program
+`wcscheduler`](https://github.com/bulletmark/wcscheduler) which imports
 this module and can be used to schedule one or more switches on/off at
 specified times and days of week.
 
