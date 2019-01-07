@@ -65,7 +65,7 @@ def main():
     opt.add_argument('-m', '--msggap', type=int,
             default=int(msggap * 1000),
             help='inter message gap in milliseconds')
-    opt.add_argument('group', type=int,
+    opt.add_argument('group',
             help='group, 0 to 1023')
     opt.add_argument('address',
             help='switch address to write to, 0 to 7 (6=all in same group)')
@@ -78,13 +78,17 @@ def main():
     bitlonggap = args.bitlonggap / 1000000
     msggap = args.msggap / 1000
 
+    groups = [int(g) for g in args.group.split(',')] \
+            if ',' in str(args.group) else [int(args.group)]
     addresses = [int(a) for a in args.address.split(',')] \
             if ',' in str(args.address) else [int(args.address)]
 
-    for addr in addresses:
-        set(args.group, addr, args.value, args.pin)
-        print('Set Watts Clever switch group {} + address {} to {}'.format(
-            args.group, addr, args.value))
+    for group in groups:
+        for addr in addresses:
+            set(group, addr, args.value, args.pin)
+            print('Set Watts Clever switch group {} + address {} to {}'.format(
+                group, addr, args.value))
+            _sleep(.2)
 
 if __name__ == '__main__':
     main()
