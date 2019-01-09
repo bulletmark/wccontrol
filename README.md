@@ -155,6 +155,34 @@ Switch both (i.e. all) devices in group 0 to OFF:
 
     wccontrol 0 6 0
 
+### Command Line Options
+
+```
+usage: wccontrol [-h] [-p PIN] [-r RETRIES] [-s BITSHORTGAP] [-l BITLONGGAP]
+                 [-m MSGGAP]
+                 group address {0,1}
+
+Module/program to set a Watts Clever Smart switch on or off.
+
+positional arguments:
+  group                 group, 0 to 1023
+  address               switch address to write to, 0 to 7 (6=all in same
+                        group)
+  {0,1}                 value 0=off, 1=on
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -p PIN, --pin PIN     RPi BCM GPIO pin to output (default: 4)
+  -r RETRIES, --retries RETRIES
+                        number of retries to send (default: 10)
+  -s BITSHORTGAP, --bitshortgap BITSHORTGAP
+                        inter bit short gap in microseconds (default: 406)
+  -l BITLONGGAP, --bitlonggap BITLONGGAP
+                        inter bit long gap in microseconds (default: 937)
+  -m MSGGAP, --msggap MSGGAP
+                        inter message gap in milliseconds (default: 20)
+```
+
 ### Using as a Python Module
 
 ```python
