@@ -190,6 +190,10 @@ import wccontrol
 wccontrol.set(0, 2, 1)
 ```
 
-See the stub main code in `wccontrol.py` for a more complete example.
+See the stub code in
+[`wccontrol.py`](https://github.com/bulletmark/wccontrol/blob/master/wccontrol.py)
+or my [scheduler
+application](https://github.com/bulletmark/wcscheduler/blob/master/wcscheduler)
+for more complete examples using the python module.
 
 <!-- vim: se ai syn=markdown: -->

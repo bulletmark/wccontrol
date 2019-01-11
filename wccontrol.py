@@ -82,13 +82,15 @@ def main():
             if ',' in str(args.group) else [int(args.group)]
     addresses = [int(a) for a in args.address.split(',')] \
             if ',' in str(args.address) else [int(args.address)]
+    last = (groups[-1], addresses[-1])
 
     for group in groups:
         for addr in addresses:
             set(group, addr, args.value, args.pin)
             print('Set Watts Clever switch group {} + address {} to {}'.format(
                 group, addr, args.value))
-            _sleep(.2)
+            if (group, addr) != last:
+                _sleep(.2)
 
 if __name__ == '__main__':
     main()
