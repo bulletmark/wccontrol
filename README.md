@@ -37,14 +37,14 @@ switch group and addresses, and then to operate the switches on and off.
 
 ### RF Transmitter
 
-You also need a 433 MHz RF transmitter.
+You also need a 433 MHz RF transmitter to connect to your Raspberry Pi.
 
 ![RF Transmitter](http://i.imgur.com/UHoh3Px.jpg)
 
-RF modules for Raspberry Pi and similar devices are purchased for only a
-few bucks on ebay etc, usually as a transmitter and receiver pair. To
-use `wccontrol`, we only need the transmitter which is the smaller board
-as shown above.
+RF modules for like the above for Raspberry Pi and similar devices are
+purchased for only a few bucks on ebay etc, usually as a transmitter and
+receiver pair. To use `wccontrol`, we only need the transmitter which is
+the smaller board as shown above.
 
 The transmitter has 3 pins which you directly connect to the RPi header
 pins using push-on [female to female jumper
