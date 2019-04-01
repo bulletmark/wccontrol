@@ -196,4 +196,15 @@ or my [scheduler
 application](https://github.com/bulletmark/wcscheduler/blob/master/wcscheduler)
 for more complete examples using the python module.
 
+### IFTTT Integration
+
+Another example of how this module can be used is to call it from a tiny
+web service application you can run on your Raspberry Pi and which can
+receive [IFTTT](https://ifttt.com/discover) web-hook messages from the
+internet to turn devices on and off. Usually you would just forward a
+port from your home firewall/router to the RPi. The web-hooks can be
+triggered by the Google Assistant service. So you can say "Hey Google,
+turn the Living Room lights on" and it happens! Quite simple and cheap
+to implement given the hardware described here.
+
 <!-- vim: se ai syn=markdown: -->
