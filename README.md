@@ -22,10 +22,10 @@ You need one or more of these:
 
 ![Watts Clever RF Switch](http://i.imgur.com/mILcB6m.jpg)
 
-Often this is purchased in a pack with 2 or 4 such switches, and an IR
-(infra-red) receiver box which allows you to operate the remote switches using a
-standard TV remote which talks IR to the receiver, then the receiver
-talks RF 433 MHz to the switches. E.g the pack is:
+Often this is purchased in a pack with 2, 3, or 4 such switches, and an
+IR (infra-red) receiver box which allows you to operate the remote
+switches using a standard TV remote which talks IR to the receiver, then
+the receiver talks RF 433 MHz to the switches. E.g the pack is:
 
 ![Watts Clever Easy Off Pack](http://i.imgur.com/uqLBL8f.jpg)
 
@@ -97,7 +97,7 @@ Add your user to that group:
 
 Install `gpio.rules`:
 
-    sudo cp gpio.rules /etc/udev.rules.d/99-gpio.rules
+    sudo cp gpio.rules /etc/udev/rules.d/99-gpio.rules
 
 Reboot your RPi and log back in again.
 
