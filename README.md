@@ -93,7 +93,7 @@ As root, create `gpio` group:
 
 Add your user to that group:
 
-    sudo usermod -G gpio $USER
+    sudo usermod -aG gpio $USER
 
 Install `gpio.rules`:
 
