@@ -41,7 +41,7 @@ You also need a 433 MHz RF transmitter to connect to your Raspberry Pi.
 
 ![RF Transmitter](http://i.imgur.com/UHoh3Px.jpg)
 
-RF modules for like the above for Raspberry Pi and similar devices are
+RF modules like the above for Raspberry Pi and similar devices are
 purchased for only a few bucks on ebay etc, usually as a transmitter and
 receiver pair. To use `wccontrol`, we only need the transmitter which is
 the smaller board as shown above.
