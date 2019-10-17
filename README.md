@@ -67,6 +67,8 @@ passing the `pin` argument.
 
 ### Installation
 
+Requires Python 3.4 or later. Does not work with Python 2.
+
 `wccontrol` is [available on PyPI](https://pypi.org/project/wccontrol/)
 so install the usual way, e.g:
 
