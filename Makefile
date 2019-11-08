@@ -21,7 +21,7 @@ all:
 	@echo "Type sudo make install|uninstall, or make doc|check|clean|sdist|upload"
 
 install:
-	@python setup.py install --root=$(or $(DESTDIR),/) --optimize=1
+	@python3 setup.py install --root=$(or $(DESTDIR),/) --optimize=1
 
 uninstall:
 	@rm -vrf $(DESTDIR)/usr/bin/$(NAME)* $(DESTDIR)/etc/$(NAME).conf \
