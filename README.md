@@ -73,7 +73,7 @@ Requires Python 3.4 or later. Does not work with Python 2.
 so install the usual way, e.g:
 
 ```bash
-pip install wccontrol
+pip3 install wccontrol
 ```
 
 Or explicitly from [github](https://github.com/bulletmark/wccontrol):
@@ -81,7 +81,7 @@ Or explicitly from [github](https://github.com/bulletmark/wccontrol):
 ```bash
 git clone https://github.com/bulletmark/wccontrol.git
 cd wccontrol
-sudo make install
+sudo pip3 install .
 ```
 
 #### Make GPIO Device Accessible
