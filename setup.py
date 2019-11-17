@@ -13,7 +13,7 @@ executable = stat.S_IEXEC | stat.S_IXGRP | stat.S_IXOTH
 
 setup(
     name=name,
-    version='1.12',
+    version='1.13',
     description='Python module/program to control Watts Clever switch',
     long_description=here.joinpath('README.md').read_text(),
     long_description_content_type='text/markdown',
