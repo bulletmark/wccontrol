@@ -97,9 +97,12 @@ Add your user to that group:
 
     sudo usermod -aG gpio $USER
 
-Install `gpio.rules`:
+Install `gpio.rules` (execute one of the following lines depending if
+you installed a local git clone, or from where `pip` installed to):
 
     sudo cp gpio.rules /etc/udev/rules.d/99-gpio.rules
+    sudo cp /usr/share/wccontrol/gpio.rules /etc/udev/rules.d/99-gpio.rules
+    sudo cp /usr/local/share/wccontrol/gpio.rules /etc/udev/rules.d/99-gpio.rules
 
 Reboot your RPi and log back in again.
 

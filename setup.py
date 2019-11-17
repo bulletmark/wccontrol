@@ -13,7 +13,7 @@ executable = stat.S_IEXEC | stat.S_IXGRP | stat.S_IXOTH
 
 setup(
     name=name,
-    version='1.11',
+    version='1.12',
     description='Python module/program to control Watts Clever switch',
     long_description=here.joinpath('README.md').read_text(),
     long_description_content_type='text/markdown',
@@ -29,7 +29,7 @@ setup(
         'Programming Language :: Python :: 3',
     ],
     data_files=[
-        ('share/{}'.format(name), ['README.md']),
+        ('share/{}'.format(name), ['README.md', 'gpio.rules']),
     ],
     scripts=[f.name for f in here.iterdir() if f.name.startswith(name)
         and f.is_file() and f.stat().st_mode & executable],
