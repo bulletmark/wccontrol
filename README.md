@@ -2,8 +2,8 @@
 
 This is a Raspberry Pi command line program and Python module to switch
 on and off a Watts Clever RF Switch via a cheap 433 MHz transmitter
-module. I also have a [higher level program
-`wcscheduler`](https://github.com/bulletmark/wcscheduler) which imports
+module. I also have a higher level program
+[`wcscheduler`](https://github.com/bulletmark/wcscheduler) which imports
 this module and can be used to schedule one or more switches on/off at
 specified times and days of week.
 
@@ -59,7 +59,9 @@ Right  | GND         | Ground  (e.g. board pin 6).
 
 You can significantly increase the range of the transmitter by soldering
 a 17.3 cm copper wire to the ANT pad in the corner of the PCB. Ideally,
-orientate the wire parallel to the switches.
+orientate the wire parallel to the switches, i.e. if you plug the RF
+switch unit directly into a wall socket then orientate the antenna wire
+vertically.
 
 Note that `wccontrol` uses GPIO4 by default to drive the transmitter but
 you can easily set it to use any of the other Raspberry Pi GPIO pins by
