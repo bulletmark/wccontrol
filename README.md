@@ -213,6 +213,8 @@ internet to turn devices on and off. Usually you would just forward a
 port from your home firewall/router to the RPi. The web-hooks can be
 triggered by the Google Assistant service. So you can say "Hey Google,
 turn the Living Room lights on" and it happens! Quite simple and cheap
-to implement given the hardware described here.
+to implement given the hardware described here. My [scheduler
+application](https://github.com/bulletmark/wcscheduler/blob/master/wcscheduler)
+for _wccontrol_ has [IFTTT](https://ifttt.com/discover) integration.
 
 <!-- vim: se ai syn=markdown: -->
