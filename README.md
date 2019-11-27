@@ -214,7 +214,7 @@ port from your home firewall/router to the RPi. The web-hooks can be
 triggered by the Google Assistant service. So you can say "Hey Google,
 turn the Living Room lights on" and it happens! Quite simple and cheap
 to implement given the hardware described here. My [scheduler
-application](https://github.com/bulletmark/wcscheduler/blob/master/wcscheduler)
+application](https://github.com/bulletmark/wcscheduler)
 for _wccontrol_ has [IFTTT](https://ifttt.com/discover) integration.
 
 <!-- vim: se ai syn=markdown: -->
