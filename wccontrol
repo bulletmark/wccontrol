@@ -1,6 +1,0 @@
-#!/usr/bin/python3
-# Command line stub to run wccontrol.py.
-# M.Blakeney, Nov 2018.
-from sys import exit
-from wccontrol import main
-exit(main())

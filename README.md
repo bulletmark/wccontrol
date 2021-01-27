@@ -54,8 +54,8 @@ as follows.
 Tx pin | Description | Raspberry Pi GPIO header
 ------ | ----------- | ------------------------
 Left   | Data        | GPIO4 (board pin 7)
-Middle | VCC         | 5V power (e.g. board pin 4)
-Right  | GND         | Ground  (e.g. board pin 6).
+Middle | VCC         | 5V power (e.g. board pin 4 or 2)
+Right  | GND         | Ground  (e.g. board pin 6 or 9 or etc)
 
 You can significantly increase the range of the transmitter by soldering
 a 17.3 cm copper wire to the ANT pad in the corner of the PCB. Ideally,
@@ -69,7 +69,8 @@ passing the `pin` argument.
 
 ### Installation
 
-Requires Python 3.4 or later. Does not work with Python 2.
+Requires Python 3.4 or later. Does not work with Python 2. Ensure that
+`python3-pip` and `python3-wheel` packages are installed.
 
 `wccontrol` is [available on PyPI](https://pypi.org/project/wccontrol/)
 so install the usual way, e.g:
