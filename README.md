@@ -76,7 +76,7 @@ Requires Python 3.4 or later. Does not work with Python 2. Ensure that
 so install the usual way, e.g:
 
 ```bash
-pip3 install wccontrol
+pip3 install -U wccontrol
 ```
 
 Or explicitly from [github](https://github.com/bulletmark/wccontrol):
