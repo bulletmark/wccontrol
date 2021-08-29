@@ -48,8 +48,7 @@ the smaller board as shown above.
 
 The transmitter has 3 pins which you directly connect to the RPi header
 pins using push-on [female to female jumper
-wires](https://cdn.solarbotics.com/products/photos/0044041262b3ac74afe434653a898da2/45030-IMG_6230wht.jpg)
-as follows.
+wires](https://www.adafruit.com/product/266) as follows.
 
 Tx pin | Description | Raspberry Pi GPIO header
 ------ | ----------- | ------------------------
