@@ -14,7 +14,7 @@ protocol = '0011010011{:010b}{:01b}{:03b}1'
 
 # Default parameters. Times are all in secs.
 pin = 4
-retries = 10
+retries = 20
 bitshortgap = 406 / 1000000
 bitlonggap = 937 / 1000000
 msggap = 20 / 1000

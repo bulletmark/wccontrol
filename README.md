@@ -182,7 +182,7 @@ optional arguments:
   -h, --help            show this help message and exit
   -p PIN, --pin PIN     RPi BCM GPIO pin to output (default: 4)
   -r RETRIES, --retries RETRIES
-                        number of retries to send (default: 10)
+                        number of retries to send (default: 20)
   -s BITSHORTGAP, --bitshortgap BITSHORTGAP
                         inter bit short gap in microseconds (default: 406)
   -l BITLONGGAP, --bitlonggap BITLONGGAP
