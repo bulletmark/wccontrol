@@ -1,4 +1,5 @@
 ## WCCONTROL - Watts Clever Switch Control
+[![PyPi](https://img.shields.io/pypi/v/wccontrol)](https://pypi.org/project/wccontrol/)
 
 This is a Raspberry Pi command line program and Python module to switch
 on and off a Watts Clever RF Switch via a cheap 433 MHz transmitter
