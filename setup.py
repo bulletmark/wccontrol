@@ -11,7 +11,7 @@ here = Path(__file__).resolve().parent
 
 setup(
     name=name,
-    version='1.15',
+    version='1.16',
     description='Python module/program to control Watts Clever switch',
     long_description=here.joinpath('README.md').read_text(),
     long_description_content_type='text/markdown',
@@ -21,7 +21,7 @@ setup(
     keywords='RPi',
     license='GPLv3',
     py_modules=[module],
-    python_requires='>=3.4',
+    python_requires='>=3.6',
     install_requires=['RPi.GPIO'],
     classifiers=[
         'Programming Language :: Python :: 3',

@@ -87,8 +87,8 @@ def main():
     for group in groups:
         for addr in addresses:
             set(group, addr, args.value, args.pin)
-            print('Set Watts Clever switch group {} + address {} to {}'.format(
-                group, addr, args.value))
+            print(f'Set Watts Clever switch group {group} + '
+                    f'address {addr} to {args.value}')
             if (group, addr) != last:
                 _sleep(.2)
 

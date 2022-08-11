@@ -69,7 +69,7 @@ passing the `pin` argument.
 
 ### Installation
 
-Requires Python 3.4 or later. Does not work with Python 2. Ensure that
+Requires Python 3.6 or later. Does not work with Python 2. Ensure that
 `python3-pip` and `python3-wheel` packages are installed.
 
 `wccontrol` is [available on PyPI](https://pypi.org/project/wccontrol/)
