@@ -17,7 +17,7 @@ and
 The latest version of this document and code is available at
 https://github.com/bulletmark/wccontrol.
 
-### Watts Clever Switch
+## Watts Clever Switch
 
 You need one or more of these:
 
@@ -36,7 +36,7 @@ not need the blue box in above image), neither to operate or initially
 program the switches. `wccontrol` can be used to fully program
 switch group and addresses, and then to operate the switches on and off.
 
-### RF Transmitter
+## RF Transmitter
 
 You also need a 433 MHz RF transmitter to connect to your Raspberry Pi.
 
@@ -67,50 +67,52 @@ Note that `wccontrol` uses GPIO4 by default to drive the transmitter but
 you can easily set it to use any of the other Raspberry Pi GPIO pins by
 passing the `pin` argument.
 
-### Installation
+## Installation
 
-Requires Python 3.6 or later. Does not work with Python 2. Ensure that
-`python3-pip` and `python3-wheel` packages are installed.
+Requires Python 3.6 or later. Does not work with Python 2.
 
 `wccontrol` is [available on PyPI](https://pypi.org/project/wccontrol/)
 so install the usual way, e.g:
 
 ```bash
-pip3 install -U wccontrol
+$ pipx install -U wccontrol
 ```
 
 Or explicitly from [github](https://github.com/bulletmark/wccontrol):
 
 ```bash
-git clone https://github.com/bulletmark/wccontrol.git
-cd wccontrol
-sudo pip3 install .
+$ git clone https://github.com/bulletmark/wccontrol.git
+$ cd wccontrol
+$ pipx install .
 ```
 
-#### Make GPIO Device Accessible
+### Make GPIO Device Accessible
 
 To be able to run this utility/module as your normal user you need to
 install a udev rule and assign yourself to the `gpio` group.
 
 As root, create `gpio` group:
 
-    sudo groupadd -f -r gpio
+```bash
+$ sudo groupadd -f -r gpio
+```
 
 Add your user to that group:
 
-    sudo usermod -aG gpio $USER
+```bash
+$ sudo usermod -aG gpio $USER
+```
 
-Install `gpio.rules` (execute one of the following lines depending if
-you installed a local git clone, or from where `pip` installed to):
+Fetch `gpio.rules` from this repo and copy it to the appropriate place
+on your system:
 
-    sudo cp gpio.rules /etc/udev/rules.d/99-gpio.rules
-    sudo cp env/share/wccontrol/gpio.rules /etc/udev/rules.d/99-gpio.rules
-    sudo cp /usr/share/wccontrol/gpio.rules /etc/udev/rules.d/99-gpio.rules
-    sudo cp /usr/local/share/wccontrol/gpio.rules /etc/udev/rules.d/99-gpio.rules
+```bash
+$ sudo curl -L https://raw.githubusercontent.com/bulletmark/wccontrol/master/gpio.rules -o /etc/udev/rules.d/99-gpio.rules
+```
 
 Reboot your RPi and log back in again.
 
-### Groups and Addresses
+## Groups and Addresses
 
 Before you can operate a switch on/off you must first program it to
 respond to a specific _group_ and _address_.
@@ -123,7 +125,7 @@ actually only 7 unique addresses which you can use per group, 0->5 and
 7. Thus there are potentially 1024 x 7 individually addressable devices
 you can control.
 
-#### Program Group and Address to Device
+### Program Group and Address to Device
 
 E.g. say you want to assign your first switch as address 0 in group 0.
 
@@ -138,38 +140,52 @@ E.g. say you want to assign your first switch as address 0 in group 0.
    `wccontrol 0 0 0` to confirm the switch goes OFF.
 1. Repeat the above steps for your other switches using a different group/address.
 
-### Example Commands to Switch On and Off
+## Example Commands to Switch On and Off
 
 Switch group 0, device 2 to ON:
 
-    wccontrol 0 2 1
+```bash
+$ wccontrol 0 2 1
+```
 
 Switch group 0, device 2 to OFF:
 
-    wccontrol 0 2 0
+```bash
+$ wccontrol 0 2 0
+```
 
 Switch group 0, device 3 to ON:
 
-    wccontrol 0 3 1
+```bash
+$ wccontrol 0 3 1
+```
 
 Switch group 0, device 3 to OFF:
 
-    wccontrol 0 3 0
+```bash
+$ wccontrol 0 3 0
+```
 
 Switch both (i.e. all) devices in group 0 to ON:
 
-    wccontrol 0 6 1
+```bash
+$ wccontrol 0 6 1
+```
 
 Switch both (i.e. all) devices in group 0 to OFF:
 
-    wccontrol 0 6 0
+```bash
+$ wccontrol 0 6 0
+```
 
-### Command Line Options
+## Command Line Options
+
+Type `wccontrol -h` to view the usage summary:
 
 ```
-usage: wccontrol [-h] [-p PIN] [-r RETRIES] [-s BITSHORTGAP] [-l BITLONGGAP]
-                 [-m MSGGAP]
-                 group address {0,1}
+usage: wccontrol [-h] [-p PIN] [-r RETRIES] [-s BITSHORTGAP]
+                    [-l BITLONGGAP] [-m MSGGAP]
+                    group address {0,1}
 
 Module/program to set a Watts Clever Smart switch on or off.
 
@@ -179,7 +195,7 @@ positional arguments:
                         group)
   {0,1}                 value 0=off, 1=on
 
-optional arguments:
+options:
   -h, --help            show this help message and exit
   -p PIN, --pin PIN     RPi BCM GPIO pin to output (default: 4)
   -r RETRIES, --retries RETRIES
@@ -192,7 +208,7 @@ optional arguments:
                         inter message gap in milliseconds (default: 20)
 ```
 
-### Using as a Python Module
+## Using as a Python Module
 
 ```python
 import wccontrol
@@ -205,7 +221,7 @@ or my [scheduler
 application](https://github.com/bulletmark/wcscheduler/blob/master/wcscheduler)
 for more complete examples using the python module.
 
-### IFTTT Integration
+## IFTTT Integration
 
 Another example of how this module can be used is to call it from a tiny
 web service application you can run on your Raspberry Pi and which can

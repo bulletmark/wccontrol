@@ -3,6 +3,7 @@
 # Author: Mark Blakeney, Nov 2018.
 
 from time import sleep as _sleep
+
 import RPi.GPIO as gpio
 
 # This is a representation of the message protocol used by the Watts
