@@ -1,4 +1,4 @@
-SUBSYSTEM=="gpiomem", GROUP="gpio", MODE="0660"
+SUBSYSTEM=="*gpiomem*", GROUP="gpio", MODE="0660"
 
 SUBSYSTEM=="gpio", GROUP="gpio", MODE="0660"
 SUBSYSTEM=="gpio*", PROGRAM="/bin/sh -c '\
