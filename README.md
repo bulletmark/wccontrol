@@ -183,9 +183,7 @@ $ wccontrol 0 6 0
 Type `wccontrol -h` to view the usage summary:
 
 ```
-usage: wccontrol [-h] [-p PIN] [-r RETRIES] [-s BITSHORTGAP]
-                    [-l BITLONGGAP] [-m MSGGAP]
-                    group address {0,1}
+usage: wccontrol [-h] [-p PIN] [-r RETRIES] group address {0,1}
 
 Module/program to set a Watts Clever Smart switch on or off.
 
@@ -199,20 +197,19 @@ options:
   -h, --help            show this help message and exit
   -p PIN, --pin PIN     RPi BCM GPIO pin to output (default: 4)
   -r RETRIES, --retries RETRIES
-                        number of retries to send (default: 20)
-  -s BITSHORTGAP, --bitshortgap BITSHORTGAP
-                        inter bit short gap in microseconds (default: 406)
-  -l BITLONGGAP, --bitlonggap BITLONGGAP
-                        inter bit long gap in microseconds (default: 937)
-  -m MSGGAP, --msggap MSGGAP
-                        inter message gap in milliseconds (default: 20)
+                        number of retries to send (default: 15)
 ```
 
 ## Using as a Python Module
 
 ```python
-import wccontrol
-wccontrol.set(0, 2, 1)
+from wccontrol import WCcontrol
+
+# Create instance on given "pin"
+wc = WCcontrol(pin)
+
+# Use this instance
+wc.set(0, 2, 1)
 ```
 
 See the stub code in
