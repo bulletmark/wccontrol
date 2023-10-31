@@ -14,7 +14,7 @@ PROTOCOL = '0011010011{:010b}{:01b}{:03b}1'
 
 # Default parameters. Times are all in secs.
 PIN = 4
-RETRIES = 15
+RETRIES = 20
 MSGGAP = 20 / 1000
 
 # The following are the bit times for the protocol in secs
