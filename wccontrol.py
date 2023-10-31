@@ -15,13 +15,19 @@ PROTOCOL = '0011010011{:010b}{:01b}{:03b}1'
 # Default parameters. Times are all in secs.
 PIN = 4
 RETRIES = 20
-MSGGAP = 20 / 1000
 
-# The following are the bit times for the protocol in secs
-BIT_ON_TIMES = (938 / 1_000_000, 407 / 1_000_000)
-BIT_TOT_TIME = 1188 / 1_000_000
+# The following times are all specified in usecs
+BIT_ON_TIMES = (938, 407)
+BIT_TOT_TIME = 1188
+LATENCY = 80
 
-DELAYS = tuple((b, BIT_TOT_TIME - b) for b in BIT_ON_TIMES)
+# Pre-calculate the delays (in float secs) for each bit
+DELAYS = tuple(((b - LATENCY) / 1000_000,
+                (BIT_TOT_TIME - LATENCY - b) / 1000_000)
+               for b in BIT_ON_TIMES)
+
+# Gap between messages in seconds
+MSGGAP = (20 / 1000) - (LATENCY / 1000_000)
 
 class _WCcontrol:
     'Class to control a Watts Clever Smart switch'
@@ -41,9 +47,9 @@ class _WCcontrol:
         'Transmit given value to given address'
         pin = self.pin
         msg = PROTOCOL.format(group, 0 if on else 1, address)
-        for r in range(retries):
-            for c in msg:
-                delay1, delay2 = DELAYS[c == '1']
+        for _ in range(retries):
+            for b in msg:
+                delay1, delay2 = DELAYS[b == '1']
                 gpio.output(pin, 1)
                 sleep(delay1)
                 gpio.output(pin, 0)
