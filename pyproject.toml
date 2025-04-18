@@ -6,6 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "wccontrol"
 description = "Python module/program to control Watts Clever switch"
 readme = "README.md"
+license = "GPL-3.0-or-later"
 requires-python = ">=3.6"
 keywords = ["rpi", "pi"]
 classifiers = [
@@ -25,9 +26,6 @@ Homepage = "https://github.com/bulletmark/wccontrol"
 
 [project.scripts]
 wccontrol = "wccontrol:main"
-
-[project.license]
-text = "GPLv3"
 
 [tool.setuptools_scm]
 version_scheme = "post-release"
