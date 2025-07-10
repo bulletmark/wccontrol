@@ -1,19 +1,24 @@
 NAME = $(shell basename $(CURDIR))
-PYNAME = $(subst -,_,$(NAME))
+PYFILES = $(wildcard *.py)
 
 check:
-	ruff check $(PYNAME).py
-	vermin -vv --exclude importlib.metadata --no-tips -i $(PYNAME).py
+	ruff check $(PYFILES)
+	mypy $(PYFILES)
+	pyright $(PYFILES)
+	vermin -vv --no-tips -i $(PYFILES)
 
-build:
+build::
 	rm -rf dist
 	uv build
 
-upload: build
+upload:: build
 	uv-publish
 
-doc:
+doc::
 	update-readme-usage
 
-clean:
+format::
+	ruff check --select I --fix $(PYFILES) && ruff format $(PYFILES)
+
+clean::
 	@rm -vrf *.egg-info .venv/ build/ dist/ __pycache__/
