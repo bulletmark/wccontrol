@@ -72,10 +72,10 @@ passing the `pin` argument.
 Requires Python 3.6 or later. Does not work with Python 2.
 
 `wccontrol` is [available on PyPI](https://pypi.org/project/wccontrol/)
-so install the usual way, e.g:
+so install using [`uv`](https://docs.astral.sh/uv/concepts/tools/), e.g:
 
 ```bash
-$ pipx install -U wccontrol
+$ uv tool install wccontrol
 ```
 
 Or explicitly from [github](https://github.com/bulletmark/wccontrol):
@@ -83,7 +83,7 @@ Or explicitly from [github](https://github.com/bulletmark/wccontrol):
 ```bash
 $ git clone https://github.com/bulletmark/wccontrol.git
 $ cd wccontrol
-$ pipx install .
+$ uv tool install .
 ```
 
 ### Make GPIO Device Accessible
