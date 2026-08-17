@@ -1,8 +1,8 @@
-#!/usr/bin/python3
 "Module/program to set a Watts Clever Smart switch on or off."
 
 # Author: Mark Blakeney, Nov 2018.
 from time import sleep
+from typing import ClassVar
 
 import RPi.GPIO as gpio  # type: ignore
 
@@ -35,8 +35,8 @@ MSGGAP = (20 / 1000) - (LATENCY / 1000_000)
 class _WCcontrol:
     "Class to control a Watts Clever Smart switch"
 
-    pins = {}
-    gpio_is_setup = False
+    pins: ClassVar = {}
+    gpio_is_setup: ClassVar = False
 
     def __init__(self, pin):
         if not self.gpio_is_setup:

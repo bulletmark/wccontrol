@@ -3,8 +3,7 @@ PYFILES = $(wildcard *.py)
 
 check:
 	ruff check $(PYFILES)
-	mypy $(PYFILES)
-	pyright $(PYFILES)
+	ty check $(PYFILES)
 	vermin -vv --no-tips -i $(PYFILES)
 	md-link-checker -w
 
